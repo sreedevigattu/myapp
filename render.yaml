@@ -1,7 +1,7 @@
 # Exported from Render on 2024-04-08T09:34:06Z
 services:
 - type: web
-  name: myapp
+  name: myapp1
   runtime: node
   repo: https://github.com/sreedevigattu/myapp
   branch: main
@@ -12,4 +12,4 @@ services:
   region: oregon
   buildCommand: yarn
   startCommand: node app.js
-version: ""
+version: "1"
