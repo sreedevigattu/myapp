@@ -12,4 +12,4 @@ services:
   region: oregon
   buildCommand: yarn
   startCommand: node app.js
-version: "2"
+version: ""
