@@ -82,6 +82,13 @@ async function transcribeWithASsemblyAI(filePath) {
     let formData = new FormData();
     formData.append('file', fileStream);
 
+    if (process.env.NODE_ENV === 'dev') {
+        require('dotenv').config();
+    }
+    const API_KEY = process.env.ASSEMBLY_AI_API_KEY;
+    if (API_KEY !== '') {
+        console.log("API_KEY read successfully");
+    }
     let uploadResponse = await axios.post('https://api.assemblyai.com/v2/upload', formData, {
         headers: {
             ...formData.getHeaders(),
