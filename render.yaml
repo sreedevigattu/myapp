@@ -1,0 +1,15 @@
+# Exported from Render on 2024-04-08T09:34:06Z
+services:
+- type: web
+  name: myapp
+  runtime: node
+  repo: https://github.com/sreedevigattu/myapp
+  branch: main
+  plan: free
+  envVars:
+  - key: ASSEMBLY_AI_API_KEY
+    sync: false
+  region: oregon
+  buildCommand: yarn
+  startCommand: node app.js
+version: "1"
